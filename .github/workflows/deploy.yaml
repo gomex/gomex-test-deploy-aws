@@ -1,0 +1,16 @@
+name: "Terraform Executa Modulo"
+
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  terraform:
+    uses: "kelvinshammai/cicd_centralizado/.github/workflows/terraform_executa_modulo_aws.yaml@feat/adiciona-workflow-reutilizavel-terraform-aws"
+    with:
+      aws_regio: "us-east-1"
+      tf_workspace: "default"
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
