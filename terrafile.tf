@@ -5,7 +5,7 @@ provider "aws" {
 
 
 module "ecr-mentoria" {
-  source    = "https://github.com/mentoriaiac/iac-modulo-aws-ecr.git"
+  source    = "github.com/mentoriaiac/iac-modulo-aws-ecr.git"
   repo_name = "api-tika"
 
   tags = {
